@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Analysis Result</h1>
+
+    <img src="/{{ image_path }}" width="250">
+
+    <div class="result">
+        <div class="label">Disease:</div>
+        <div class="value">{{ disease }}</div>
+
+        <div class="label">Confidence:</div>
+        <div class="value">{{ confidence }}%</div>
+
+        <div class="progress">
+            <div class="progress-bar" style="width: {{ confidence }}%;"></div>
+        </div>
+
+        <div class="label">Cause:</div>
+        <div class="value">{{ cause }}</div>
+
+        <div class="label">Cure:</div>
+        <div class="value">{{ cure }}</div>
+    </div>
+
+    <br>
+    <a href="/"><button>Analyze Another</button></a>
+</div>
+
+</body>
+</html>
